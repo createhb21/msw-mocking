@@ -1,4 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "react-query"
+import GlobalLoader from "./GlobalLoader"
 import { getTodos, postTodo } from "./my-api/getTodos"
 
 export default function Todos() {
@@ -26,6 +27,8 @@ export default function Todos() {
 
 	return (
 		<div>
+			<GlobalLoader />
+			{/* {query.isFetching ? <div>Refresh</div> : null} */}
 			<ul>
 				{query.data.map(todo => (
 					<li key={todo.id}>{todo.title}</li>
