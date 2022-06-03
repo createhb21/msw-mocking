@@ -1,6 +1,8 @@
 import { QueryClient, QueryClientProvider } from "react-query"
 import "./App.css"
+import InfiniteScroll from "./components/ReactQuery/InfiniteScroll"
 import Overview from "./components/ReactQuery/Overview"
+import Pagination from "./components/ReactQuery/Pagination"
 import Todos from "./components/ReactQuery/QuickStart"
 // import Cache from "./components/SWRExample/Cache"
 // import Fetcher from "./components/SWRExample/Fetcher"
@@ -20,7 +22,9 @@ function App() {
 			{/* <Pagination /> */}
 			<QueryClientProvider client={queryClient}>
 				{/* <Overview /> */}
-				<Todos />
+				{/* <Todos /> */}
+				{/* <Pagination /> */}
+				<InfiniteScroll />
 			</QueryClientProvider>
 		</div>
 	)
